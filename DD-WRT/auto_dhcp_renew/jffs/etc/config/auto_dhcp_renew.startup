@@ -1,0 +1,6 @@
+#!/bin/sh
+logger "killall auto_dhcp_renew"
+for PID in `ps -w | grep "/jffs/etc/scripts/auto_dhcp_renew.sh" | awk '{print $1}'` ; do
+  kill $PID
+done
+/jffs/etc/scripts/auto_dhcp_renew.sh
