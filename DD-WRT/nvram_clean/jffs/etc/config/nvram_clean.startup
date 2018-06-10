@@ -1,0 +1,6 @@
+#!/bin/sh
+logger "killall nvram_clean"
+for PID in `ps -w | grep "/jffs/etc/scripts/nvram_clean.sh" | awk '{print $1}'` ; do
+  kill $PID
+done
+/jffs/etc/scripts/nvram_clean.sh
