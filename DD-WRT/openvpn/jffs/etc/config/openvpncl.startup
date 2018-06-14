@@ -1,0 +1,3 @@
+#!/bin/sh
+killall openvpn
+openvpn --config /jffs/etc/openvpncl/openvpn.conf
